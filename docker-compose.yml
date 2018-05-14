@@ -4,7 +4,7 @@ postgresdb:
     - /var/lib/postgresql/data
     
 postgres:
-  # name: postgres
+  container_name: postgres
   image: postgres
   hostname: postgres
   volumes_from:
@@ -18,14 +18,14 @@ postgres:
 discovery:
   image: "discovery:1.1.0-SNAPSHOT"
   hostname: discovery
- # name: discovery
+  container_name: discovery
   ports:
    - "9000:9000"
 
 config:
   image: "config:1.1.0-SNAPSHOT"
   hostname: config
- # name: config
+  container_name: config
   links:
     - discovery
   environment:
@@ -50,6 +50,7 @@ config:
     
 some:
   image: some:1.1.0-SNAPSHOT
+  container_name: some
   hostname: some
   links:
     - discovery
@@ -78,6 +79,7 @@ some:
 
 monitor:
   image: monitor:1.1.0-SNAPSHOT
+  container_name: monitor
   hostname: monitor
   links:
     - discovery
