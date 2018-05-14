@@ -16,14 +16,14 @@ postgres:
     - POSTGRES_PASSWORD=postgres
 
 discovery:
-  image: "discovery:1.1.0-SNAPSHOT"
+  image: "discovery:1.2.0-SNAPSHOT"
   hostname: discovery
   container_name: discovery
   ports:
    - "9000:9000"
 
 config:
-  image: "config:1.1.0-SNAPSHOT"
+  image: "config:1.2.0-SNAPSHOT"
   hostname: config
   container_name: config
   links:
@@ -35,7 +35,7 @@ config:
     - "8888:8888"
 #
 #person:
-#  image: person:1.1.0-SNAPSHOT
+#  image: person:1.2.0-SNAPSHOT
 #  hostname: person
 #  links:
 #    - discovery
@@ -49,7 +49,7 @@ config:
 #    - "8082:8082"
     
 some:
-  image: some:1.1.0-SNAPSHOT
+  image: some:1.2.0-SNAPSHOT
   container_name: some
   hostname: some
   links:
@@ -63,7 +63,7 @@ some:
     - "8083:8083"
 #
 #ui:
-#  image: ui:1.1.0-SNAPSHOT
+#  image: ui:1.2.0-SNAPSHOT
 #  hostname: ui
 #  links:
 #    - discovery
@@ -78,7 +78,7 @@ some:
 #    - "80:80"
 
 monitor:
-  image: monitor:1.1.0-SNAPSHOT
+  image: monitor:1.2.0-SNAPSHOT
   container_name: monitor
   hostname: monitor
   links:
