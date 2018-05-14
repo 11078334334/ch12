@@ -30,7 +30,7 @@ config:
     - discovery
   environment:
      EUREKA_HOST: discovery
-     EUREKA_PORT: 8761
+     EUREKA_PORT: 9000
   ports:
     - "8888:8888"
 #
@@ -43,7 +43,7 @@ config:
 #    - postgres
 #  environment:
 #     EUREKA_HOST: discovery
-#     EUREKA_PORT: 8761
+#     EUREKA_PORT: 9000
 #     SPRING_PROFILES_ACTIVE: docker
 #  ports:
 #    - "8082:8082"
@@ -56,7 +56,7 @@ some:
     - config
   environment:
      EUREKA_HOST: discovery
-     EUREKA_PORT: 8761
+     EUREKA_PORT: 9000
      SPRING_PROFILES_ACTIVE: docker
   ports:
     - "8083:8083"
@@ -71,7 +71,7 @@ some:
 #    - some
 #  environment:
 #     EUREKA_HOST: discovery
-#     EUREKA_PORT: 8761
+#     EUREKA_PORT: 9000
 #     SPRING_PROFILES_ACTIVE: docker
 #  ports:
 #    - "80:80"
@@ -85,7 +85,7 @@ monitor:
     - some
   environment:
      EUREKA_HOST: discovery
-     EUREKA_PORT: 8761
+     EUREKA_PORT: 9000
      SPRING_PROFILES_ACTIVE: docker
   ports:
     - "8989:8989"
