@@ -20,7 +20,7 @@ discovery:
   hostname: discovery
  # name: discovery
   ports:
-   - "8761:8761"
+   - "9000:9000"
 
 config:
   image: "config:1.1.0-SNAPSHOT"
