@@ -37,7 +37,7 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <configuration>
-                    <dockerHost>http://10.168.31.220:2375</dockerHost>
+                    <dockerHost>http://192.168.112.143:2375</dockerHost>
                     <imageName>${project.name}:${project.version}</imageName>
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
                     <skipDockerBuild>false</skipDockerBuild>
